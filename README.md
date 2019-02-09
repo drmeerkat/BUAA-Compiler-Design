@@ -43,5 +43,5 @@ const string Newline = "";//Newline = "\\n" if you want to beautify the mips run
 2. Don't forget what you have learnt in class.
 3. Review your design with pens and papers (debug from higher level) and don't rely too much on testing.
 ### 0x04 Acknowledgements
-Many thanks to my dear friend @ZhaoYi1031 , his project inspire me a lot.
+Many thanks to my dear friend [@ZhaoYi1031](https://github.com/ZhaoYi1031) who inspires me a lot.
 Also, great work by Pete Sanderson (programming) and Ken Vollmar. Their [MIPS Assembler and Runtime Simulator (Mars)](http://courses.missouristate.edu/KenVollmar/mars/papers.htm) runs smoothly.
