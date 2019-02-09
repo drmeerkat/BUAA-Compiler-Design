@@ -1,0 +1,41 @@
+
+void main(){
+	char a;
+	int b;
+	a = -+'a';
+	printf(a);
+	a = +-'a';
+	printf(a);
+	a = ('a');
+	printf(a);
+
+	b = 0;
+	b = --1;
+	printf(b);
+	b = +-2;
+	printf(b);
+	b = -3;
+	printf(b);
+	b = 4;
+	printf(b);
+	b = ++5;
+	printf(b);
+
+	b = --0;
+	printf(b);
+	b = +-0;
+	printf(b);
+	b = -0;
+	printf(b);
+	b = 0;
+	printf(b);
+	b = ++0;
+	printf(b);
+
+	if (a != b){
+		print("not equal(wrong comparison)");
+	}
+	if (a+0 != b){
+		print("not equal(right comparison)");
+	}
+}

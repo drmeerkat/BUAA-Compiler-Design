@@ -1,0 +1,16 @@
+0    var char a
+1    var int b
+2    void main()
+3    main func start
+4    a = 'a'
+5    b = 1
+6    #0 = b
+7    beq #0 $0 Label_0
+8    printf "right", 
+9    Label_0:
+10   #1 = a
+11   beq #1 $0 Label_1
+12   printf "wrong", 
+13   Label_1:
+14   ret 
+15   main func end

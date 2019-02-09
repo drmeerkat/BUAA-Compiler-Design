@@ -1,0 +1,193 @@
+0    const int MAX_NUM 1024
+1    int factorial()
+2    para int n
+3    factorial func start
+4    bgt n 1 Label_0
+5    ret 1
+6    Label_0:
+7    #0 = n - 1
+8    push #0
+9    call factorial
+9    #1= RET
+10   #2 = n * #1
+11   ret #2
+12   factorial func end
+13   int mod()
+14   para int x
+15   para int y
+16   mod func start
+17   #3 = x / y
+18   #4 = #3 * y
+19   #5 = x - #4
+20   x = #5
+21   ret x
+22   mod func end
+23   void swap()
+24   para int x
+25   para int y
+26   swap func start
+27   var int temp
+28   printf " x = ", x
+29   printf " y = ", y
+30   temp = x
+31   x = y
+32   y = temp
+33   printf " SWAP x = ", x
+34   printf " SWAP y = ", y
+35   ret 
+36   swap func end
+37   void complete_num()
+38   para int val
+39   complete_num func start
+40   array int k[128]
+41   var int i
+42   var int j
+43   var int n
+44   var int s
+45   var int x1
+46   var int m
+47   var int k2
+48   var int h
+49   var int leap
+50   var int x2
+51   var int a
+52   var int b
+53   var int c
+54   j = val
+55   Label_1:
+56   bge j 1024 Label_2
+57   n = -1
+58   s = j
+59   i = 1
+60   Label_3:
+61   bge i j Label_4
+62   #6 = j / i
+63   #7 = #6 * i
+64   x1 = #7
+65   push j
+66   push i
+67   call mod
+67   #8= RET
+68   bne #8 0 Label_5
+69   #9 = n + 1
+70   n = #9
+71   #10 = s - i
+72   s = #10
+73   blt n 128 Label_6
+74   printf " OVERFLOW!          ", 
+75   Label_6:
+76   bge n 128 Label_7
+77   k[n] = i
+78   Label_7:
+79   Label_5:
+80   #11 = i + 1
+81   i = #11
+82   GOTO Label_3
+83   Label_4:
+84   bne s 0 Label_8
+85   printf " complete number: ", j
+86   i = 0
+87   Label_9:
+88   bgt i n Label_10
+89   #12 = k[i]
+90   printf "  ", #12
+91   #13 = i + 1
+92   i = #13
+93   GOTO Label_9
+94   Label_10:
+95   printf "          ", 
+96   Label_8:
+97   #14 = j + 1
+98   j = #14
+99   GOTO Label_1
+100  Label_2:
+101  printf " ---------------------------------------------------------------          ", 
+102  a = 0
+103  i = 0
+104  Label_11:
+105  bge i 1024 Label_12
+106  #15 = a * i
+107  b = #15
+108  #16 = j * n
+109  c = #16
+110  #17 = a * i
+111  a = #17
+112  #18 = a + b
+113  #19 = #18 + c
+114  a = #19
+115  #20 = i + 1
+116  i = #20
+117  GOTO Label_11
+118  Label_12:
+119  b = a
+120  i = 0
+121  Label_13:
+122  bge i 1024 Label_14
+123  #21 = b + i
+124  b = #21
+125  #22 = i + 1
+126  i = #22
+127  GOTO Label_13
+128  Label_14:
+129  printf " b = ", b
+130  printf " ---------------------------------------------------------------          ", 
+131  h = 0
+132  leap = 1
+133  m = 2
+134  Label_15:
+135  bgt m 1024 Label_16
+136  #23 = m / 2
+137  k2 = #23
+138  i = 2
+139  Label_17:
+140  bgt i k2 Label_18
+141  #24 = m / i
+142  #25 = #24 * i
+143  x2 = #25
+144  push m
+145  push i
+146  call mod
+146  #26= RET
+147  bne #26 0 Label_19
+148  leap = 0
+149  Label_19:
+150  #27 = i + 1
+151  i = #27
+152  GOTO Label_17
+153  Label_18:
+154  bne leap 1 Label_20
+155  printf " ", m
+156  #28 = h + 1
+157  h = #28
+158  #29 = h / 10
+159  #30 = #29 * 10
+160  x2 = #30
+161  bne x2 h Label_21
+162  printf "          ", 
+163  Label_21:
+164  Label_20:
+165  leap = 1
+166  #31 = m + 1
+167  m = #31
+168  GOTO Label_15
+169  Label_16:
+170  printf "          The total is ", h
+171  ret 
+172  complete_num func end
+173  void main()
+174  main func start
+175  var int n
+176  push 10
+177  call factorial
+177  #32= RET
+178  n = #32
+179  printf " 10! = ", n
+180  push 5
+181  push 10
+182  call swap
+182  #33= RET
+183  push 2
+184  call complete_num
+184  #34= RET
+185  ret 
+186  main func end

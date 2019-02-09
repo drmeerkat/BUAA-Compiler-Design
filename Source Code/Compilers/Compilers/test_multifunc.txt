@@ -1,0 +1,105 @@
+int para1, para2, para3, para4, para5, para6;
+int total;
+int add1(){
+	para1 = para1+1;
+	return(para1);
+}
+int add2(){
+	para2 = para2+1;
+	return(para2);
+}
+int add3(){
+	para3 = para3+1;
+	return(para3);
+}
+int add4(){
+	para4 = para4+1;
+	return(para4);
+}
+int add5(){
+	para5 = para5+1;
+	return(para5);
+}
+int add6(){
+	para6 = para6+1;
+	return(para6);
+}
+
+
+int minus1(){
+	para1 = para1-1;
+	return (para1);
+}
+int minus2(){
+	para2 = para2-1;
+	return (para2);
+}
+int minus3(){
+	para3 = para3-1;
+	return (para3);
+}
+int minus4(){
+	para4 = para4-1;
+	return (para4);
+}
+int minus5(){
+	para5 = para5-1;
+	return (para5);
+}
+int minus6(){
+	para6 = para6-1;
+	return (para6);
+}
+
+
+int func1(int para1, int para2, int para3, int para4){
+	if (total<6){
+		total = total+2;
+		return(func1(add1()+minus1()-minus2()+add2(),func1(minus1(),add2(),para3,add4()),add3(),func1(para1,para2,para3,para4))+para1+para2+para3+para4);
+	}
+	
+	return(para1+para2+para3+para4);	
+}
+
+void main() {
+	int result;
+	int flag;
+
+	flag=0;
+	para1=1;
+	para2=0;
+	para3=1;
+	para4=0;
+	para5=1;
+	para6=1;
+	total=0;
+
+	result = func1(para1, para2, para3, para4);
+	printf(result);
+	if (result != 38){
+		printf("result test failed!");
+		flag=1;
+	}
+	if (para1 != -2){
+		printf("para1 test failed!");
+		flag=1;
+	}
+	if (para2 != 3) {
+		printf("para2 test failed!");
+		flag=1;
+	}
+	if (para3 != 4) {
+		printf("para3 test failed!");
+		flag=1;
+	}
+	if (para4 != 3) {
+		printf("para4 test failed!");
+		flag=1;
+	}
+	if (flag-1){
+		printf("All test passed");
+	}
+
+	
+
+}

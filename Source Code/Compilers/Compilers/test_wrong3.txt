@@ -1,0 +1,11 @@
+int func(){
+
+	printf("NO return");
+
+}
+
+void main(){
+
+	func();
+
+}

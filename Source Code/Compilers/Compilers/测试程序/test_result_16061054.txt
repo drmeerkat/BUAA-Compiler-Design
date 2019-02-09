@@ -1,0 +1,214 @@
+This is func_loop(9) and func_loop=
+0
+var_int1=
+1
+This is func_loop(9) and func_loop=
+1
+var_ch1=
+a
+This is func_loop(9) and func_loop=
+2
+var_int2=
+3
+This is func_loop(9) and func_loop=
+3
+var_ch2=
+f
+This is func_loop(9) and func_loop=
+4
+var_int1=
+1
+This is func_loop(9) and func_loop=
+5
+var_ch1=
+a
+This is func_loop(9) and func_loop=
+6
+This is func_loop(9) and func_loop=
+7
+This is func_loop(9) and func_loop=
+8
+This is func_loop(8) and func_loop=
+0
+var_int1=
+1
+This is func_loop(8) and func_loop=
+1
+var_ch1=
+a
+This is func_loop(8) and func_loop=
+2
+var_int2=
+3
+This is func_loop(8) and func_loop=
+3
+var_ch2=
+f
+This is func_loop(8) and func_loop=
+4
+var_int1=
+1
+This is func_loop(8) and func_loop=
+5
+var_ch1=
+a
+This is func_loop(8) and func_loop=
+6
+This is func_loop(8) and func_loop=
+7
+quit while loop(8) and do func_call 1
+quit while loop(8) and do func_call 2
+quit while loop(8) and do func_call 3
+quit while loop(8) and do func_call 4
+finish func_call and test if
+finish if test and start to test assign
+finish assign test and test simple while loop
+while_loop quit right
+array read and write right
+complex calculate right
+test func ret_val as factor
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+ret_val as val_para pass!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+var_int1=
+720
+Please input three numbers randomly to test scanf.
+For each number,input it and press enter before input the next number
+-1
+-2
+-3
+scanf result:
+number1:
+-1
+number2:
+-2
+number3:
+-3
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+-1
+Too low!
+Result=
+0
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+-2
+Too low!
+Result=
+0
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+-1
+Too low!
+Result=
+0
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+0
+local test pass!
+Result=
+0
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+1
+local test pass!
+Result=
+1
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+2
+local test pass!
+Result=
+2
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+3
+local test pass!
+local test pass!
+Result=
+6
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+4
+local test pass!
+local test pass!
+local test pass!
+Result=
+24
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+5
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+Result=
+120
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+6
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+Result=
+720
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+7
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+Result=
+5040
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+8
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+Result=
+40320
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+15
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+local test pass!
+Result=
+2004310016
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+16
+Overflow!
+Result=
+0
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+2333
+Overflow!
+Result=
+0
+Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.
+666
+test finish!

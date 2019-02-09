@@ -1,0 +1,208 @@
+const int max_loop=15;
+const char sym_of_fact='f',_ch1='-',_ch2='/',_ch3='a',_ch4='Z',_ch5='0';
+int loop,sub_loop,func_loop,var_int1,var_int2,var_int3;char var_ch1,var_ch2;
+int a1[100],a2,a3[233],a4[5],a5[5],aa,a6[8],a7[2];
+char ca1[100],ca2,ca3[233],ca4[5],ca5[5],cn,ca6[8],ca7[2];
+
+int fact(int var_int1,int n){
+  loop=loop+1;
+  sub_loop=sub_loop-1;
+  func_loop=func_loop+1;
+  var_int1=var_int1+1;
+  if(var_int1!=2)printf("local test failed!", var_int1);
+  if(var_int1==2)printf("local test pass!");
+  if(n>2)return(n*fact(1,(n-1)));
+  return(n);
+}
+
+int has_re_has_var1(int var){
+  int a1[100],a2,a3[233],a4[5],a5[5],aa,a6[8],a7[2];
+  char ca1[100],ca2,ca3[233],ca4[5],ca5[5],cn,ca6[8],ca7[2];
+  var_ch1=sym_of_fact;
+  var_ch2=sym_of_fact;
+  func_loop=func_loop+1;
+  return(var);
+}
+
+char has_re_has_var2(int var){
+  func_loop=func_loop+1;
+  return('a');
+}
+
+int has_re_has_vars1(int var1,char var2){
+  func_loop=func_loop+1;
+  return(func_loop);
+}
+
+char has_re_has_vars2(int var1,char var2){
+  const int non_var1=-0,non_var2=-1;const char non_var_ch1='-',non_var_ch2='_';
+  func_loop=func_loop+1;
+  return(var2);
+}
+
+int has_re_non_var1(){
+  func_loop=func_loop+1;
+  return(1);
+}
+
+char has_re_non_var2(){
+  func_loop=func_loop+1;
+  return('a');
+}
+
+void non_re_has_var1(int var){
+  int non_var3,non_var4;char non_var_ch3,non_var_ch4;
+  func_loop=func_loop+1;
+  return;
+}
+
+void non_re_has_vars1(int var1,char var2,int var3){
+  func_loop=func_loop+1;
+  return;
+}
+
+void non_re_non_var1(){
+  const int non_var1=-0,non_var2=-1;const char non_var_ch1='-',non_var_ch2='_';
+  int non_var3,non_var4;char non_var_ch3,non_var_ch4;
+  func_loop=func_loop+1;
+  return;
+}
+
+void non_re_non_var2(){;}
+
+void main(){
+  int str[200],i;
+  char mult;
+  int num_mult;
+  int fact_num,fact_value;
+  func_loop=0;
+  i=0;
+  while(i<9){
+    printf("This is func_loop(9) and func_loop=",func_loop);
+    switch(func_loop){
+    case 0:{var_int1=has_re_has_var1(1);
+        printf("var_int1=",var_int1);
+    }
+    case 1:{var_ch1=has_re_has_var2(1);
+        printf("var_ch1=",var_ch1);
+    }
+    case 2:{var_int2=has_re_has_vars1(var_int1,var_ch1);
+        printf("var_int2=",var_int2);
+    }
+    case 3:{var_ch2=has_re_has_vars2(var_int1,var_ch2);
+        printf("var_ch2=",var_ch2);
+    }
+    case 4:{var_int1=has_re_non_var1();
+        printf("var_int1=",var_int1);
+    }
+    case 5:{var_ch1=has_re_non_var2();
+        printf("var_ch1=",var_ch1);
+    }
+    case 6:non_re_has_var1(var_int2);
+    case 7:non_re_has_vars1(var_int1,var_ch2,var_int2);
+    default:non_re_non_var1();
+    }
+    i=i+1;
+    if(i!=func_loop)printf("error!i!=func_loop!i=",i);
+  }
+  func_loop=0;
+  while(func_loop<8){
+    printf("This is func_loop(8) and func_loop=",func_loop);
+    switch(func_loop){
+      case 0:{var_int1=has_re_has_var1(1);
+        printf("var_int1=",var_int1);
+      }
+      case 1:{var_ch1=has_re_has_var2(1);
+        printf("var_ch1=",var_ch1);
+      }
+      case 2:{var_int2=has_re_has_vars1(var_int1,var_ch1);
+        printf("var_int2=",var_int2);
+      }
+      case 3:{var_ch2=has_re_has_vars2(var_int1,var_ch2);
+        printf("var_ch2=",var_ch2);
+      }
+      case 4:{var_int1=has_re_non_var1();
+        printf("var_int1=",var_int1);
+      }
+      case 5:{var_ch1=has_re_non_var2();
+        printf("var_ch1=",var_ch1);
+      }
+      case 6:non_re_has_var1(var_int2);
+      case 7:non_re_has_vars1(var_int1,var_ch2,var_int2);
+      default:;
+    }
+  }
+  printf("quit while loop(8) and do func_call 1");
+  has_re_non_var2();
+  printf("quit while loop(8) and do func_call 2");
+  var_ch2=has_re_non_var2();
+  printf("quit while loop(8) and do func_call 3");
+  var_ch1=has_re_non_var2();
+  printf("quit while loop(8) and do func_call 4");
+  non_re_non_var2();
+  printf("finish func_call and test if");
+  if(1<2)var_ch1='1';
+  if(2>0)var_ch2='+';
+  if(4!=3)var_ch1='*';
+  var_ch2='_';
+  var_ch1=var_ch2;
+  if(+-0==-+0)var_int1=-0;
+  printf("finish if test and start to test assign");
+  var_int1=+0;
+  var_int1=-2333;
+  var_int1=+666;
+  var_int1=0;
+  var_int1=2147483647;
+  var_int2=var_int1;
+  mult='*';
+  num_mult=0;
+  num_mult=mult+0;
+  num_mult=42;
+  printf("finish assign test and test simple while loop");
+  while(num_mult<100){num_mult=num_mult+1;
+  }
+  if(num_mult==100)printf("while_loop quit right");
+  if(num_mult!=100)printf("while_loop quit error");
+  str[0]=num_mult;
+  str[num_mult]=num_mult+1;
+  var_int2=str[num_mult];
+  if(var_int2!=101)printf("array read and write error");
+  if(var_int2==101)printf("array read and write right");
+  var_int1=(str[num_mult]+var_int2)*3;
+  if(var_int1!=606)printf("complex calculate error");
+  if(var_int1==606)printf("complex calculate right");
+  var_int1=10;
+  printf("test func ret_val as factor");
+
+  var_int1=fact(1,fact(1,(fact(1,(1+1))+1)));
+  if(var_int1==fact(1,(1+5)))printf("ret_val as val_para pass!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+  if(var_int1!=fact(1,6))printf("ret_val as val_para failed!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+  printf("var_int1=",var_int1);
+  
+  printf("Please input three numbers randomly to test scanf.");
+  printf("For each number,input it and press enter before input the next number");
+  scanf(var_int1,var_int2,var_int3);
+  printf("scanf result:");
+  printf("number1:",var_int1);
+  printf("number2:",var_int2);
+  printf("number3:",var_int3);
+  while(1){
+  printf("Please input the factorial number no more than 15 and no less than 0 to test or input number 666 to terminate.");
+  scanf(fact_num);
+  if(fact_num==666){
+    printf("test finish!");
+    return;
+  }
+  fact_value=0;
+  loop=0;
+  sub_loop=fact_num+1;
+  if(fact_num>=0){
+    if(fact_num<=max_loop)fact_value=fact(1,fact_num); 
+  }
+  if(fact_num>max_loop)printf("Overflow!");
+  if(fact_num<0)printf("Too low!");
+  printf("Result=",fact_value);
+  }
+  return;
+}
+

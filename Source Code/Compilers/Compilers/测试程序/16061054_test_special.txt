@@ -1,0 +1,29 @@
+const char const_char_a = 'a', const_char_b = 'b', const_char_c = 'c', const_char_A = 'A';
+const int const_int_postive = 1, const_int_zero = +0, const_int_negtive = -1;
+const char const_char_num = '9', const_char_underline = '_',const_char_add = '+', const_char_mul = '*';
+
+int int_global_var;
+char char_global_var;
+int sort[10];
+
+void testIfExp(){
+	if('a')printf("If-Wrong 1 ...This is not permitted.");
+	if('a'>1)printf("If-Wrong 2 ...This is not permitted.");
+	if(char_global_var)printf("If-Wrong 3 ...This is not permitted.");
+	if(char_global_var>1)printf("If-Wrong 4 ...This is not permitted.");
+	if((char_global_var))printf("Congratulations!");
+	if((char_global_var)>1)printf("Congratulations again!");
+}
+
+void testCallFunction()
+{
+	testIfExp();
+}
+
+void main()
+{
+    	testCallFunction();
+}
+
+
+

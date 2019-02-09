@@ -1,0 +1,12 @@
+int x;
+int add(){
+	x=x+1;
+	return(x);
+}
+void main(){
+	int result;
+	result=0;
+	x=0;
+	result=x+add();
+	printf(result);
+}

@@ -1,0 +1,34 @@
+int x[2];
+int b;
+
+void add(int a, int b){
+	printf(a);
+	printf(b);
+}
+
+int add2(){
+    x[0] = x[0]+1;
+	return (x[0]);
+}
+
+int add3(){
+	b = b+1;
+	return (b);
+}
+
+void add4(int a, int b, int c, int d){
+	printf(a);
+	printf(b);
+	printf(c);
+	printf(d);
+}
+
+void main(){
+	x[0]=1;
+	b = 0;
+	if (b==add3()){
+		printf("emmm");
+	}
+	add(x[0], x[0]*add2()*add2());
+	add4(b, b*add3(), b*add3()*add3(), b);
+}

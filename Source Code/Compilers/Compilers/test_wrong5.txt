@@ -1,0 +1,15 @@
+char a;
+int b;
+
+
+void main(){
+	a = 'a';
+	b = 1;
+	if (b){
+		printf("right");
+	}
+	if (a){
+		printf("wrong");
+	}
+
+}

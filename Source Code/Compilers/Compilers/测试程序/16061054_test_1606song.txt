@@ -1,0 +1,160 @@
+const int CONS_1 = 12345679;
+const int CONS_2 = 0;
+const int CONS_3 = -0;
+const int CONS_4 = -12345679;
+
+
+int global_1;
+char Global_1;
+char Global_2[10];
+char Global_3[10];
+
+void hanoi(int n, char from, char tmp, char to)
+{
+
+    if (n > 0) {
+
+        hanoi(n - 1, from, to, tmp);
+
+        printf("take ", '-');
+        printf(n);
+        printf('-');
+        printf(" from ", '-');
+        printf(from);
+        printf('-');
+        printf(" to ", '-'); 
+
+        printf(to);
+        printf('-');
+        hanoi(n - 1, tmp, from, to);
+
+    }
+
+}
+
+char  func_1()
+{
+    const int const_int_1 = 1;
+    const char const_char_1 = 'b';
+    int i_1;
+    char c_1;
+    c_1 = 'c';
+    i_1 = 0;
+    while (i_1 < 10)
+    {
+        i_1 = i_1 + const_int_1;
+        Global_2[i_1] = const_char_1;
+    }
+    return (c_1);
+}
+
+char func_2(char a, int b, char c)
+{
+    const int const_int_2 = 1;
+    const char const_char_2 = 'b';
+    int i_2;
+    char c_2;
+    c_2 = 'm';
+    if (b > 0)
+    {
+        c_2 = 'n';
+        if (b <= 10)
+        {
+            i_2 = 0;
+            c_2 = 'o';
+            while (i_2 < b / 2)
+            {
+                Global_3[i_2] = a;
+                i_2 = i_2 + const_int_2;
+            }
+            while (i_2 < b)
+            {
+                Global_3[i_2] = c;
+                i_2 = i_2 + const_int_2;
+            }
+        }
+    }
+    return (c_2);
+
+}
+
+int func_3()
+{
+    const int const_int_3 = 5;
+    int i_3, j_3;
+    i_3 = 1;
+    j_3 = 1;
+    while (j_3 < const_int_3)
+    {
+        i_3 = i_3 * j_3;
+        j_3 = j_3 + 1;
+    }
+    return (i_3);
+}
+
+int func_4(int a, int b)
+{
+    const int const_int_4 = 12345679;
+    int i_4;
+    i_4 = a;
+    if (b <= 0)
+    {
+        return (0);
+    }
+    if (b >= 10)
+    {
+        return (a);
+    }
+    return (CONS_1 * b * 9);
+}
+
+void main()
+{
+    int check_int, i, j, k;
+    char check_char;
+    char a;
+    char b;
+    a = 'a';
+    b = 'b';
+    Global_1 = 'c';
+    Global_2[0] = '0';
+    Global_3[0] = '0';
+    scanf(global_1, check_int, check_char);
+    func_1();
+    printf(func_1());
+    printf('-');
+    printf(Global_1);
+    printf('-');
+    printf(func_2(a, global_1, b)); 
+    printf(Global_3[0]);
+    printf('-');
+    printf(func_3()); 
+    printf('-');
+    printf(func_4(1, global_1));
+    printf('-');
+
+    hanoi(3, 'A', 'B', 'C');
+
+    i = 1;
+    j =  - i + (i * (i + i) *(check_int - 1) / (i * check_int));
+    k = 2;
+    printf(j);
+    printf('-');
+    switch (check_char) {
+    case 'a':  printf(i);
+    case 'b': {
+        i = i + k;
+        printf(i);
+    }
+    default:{
+    }
+    }
+    switch (check_char) {
+    case 'a':  printf(i);
+    case 'b': {
+        i = i + k;
+        printf(i);
+    }
+    default:printf(k);
+    }
+}

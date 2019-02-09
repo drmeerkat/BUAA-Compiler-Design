@@ -1,0 +1,12 @@
+int a, b, c;
+char a, b, c;
+
+
+
+void main(){
+	int a[100];
+
+	a[-1] = 9;
+	a[100] = 10;
+
+}

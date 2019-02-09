@@ -1,0 +1,29 @@
+int a,b,c;
+
+void a(){
+
+	printf("test duplicated name");
+}
+
+int b(){
+	b=b+1;
+	return(b+1);
+}
+
+int c(int c){
+	int x;
+	x = c;
+	c = 2;
+	printf(x);
+	return (x);
+}
+
+void main(){
+	a=0;
+	a();
+	b=0;
+	b();
+	printf(b*(b()+3)/2);
+	c=0;
+	c(2);
+}

@@ -1,0 +1,14 @@
+int a;
+char b;
+
+void main(){
+	a=99;
+	b=1;
+	b='a';
+
+	b = a;
+	a = b;
+	a = b+0;
+	printf(a);
+
+}

@@ -1,0 +1,51 @@
+const int c1=233,c2=666;
+int iarr1[233],iarr2[666];
+char carr1[233],carr2[666];
+
+void testArr1(){
+	const int c1=232;
+	int a1;
+	char a2;
+	a1=iarr1[c1];
+	a1=iarr1[233];
+	a1=iarr1[234];
+	a2=carr1[c1];
+	a2=carr1[233];
+	a2=carr1[234];
+	a1=iarr1[-0];
+	a1=iarr1[+0];
+	a1=iarr1[23];
+	a1=iarr1[-23];
+	a1=iarr1[66];
+	a2=carr1[-0];
+	a2=carr1[+0];
+	a2=carr1[23];
+	a2=carr1[-23];
+	a2=carr1[66];
+}
+
+void testArr2(){
+	int a1;
+	char a2;
+	a1=iarr1[c1];
+	a1=iarr1[233];
+	a1=iarr1[234];
+	a2=carr1[c1];
+	a2=carr1[233];
+	a2=carr1[234];
+	a1=iarr1[-0];
+	a1=iarr1[+0];
+	a1=iarr1[23];
+	a1=iarr1[-23];
+	a1=iarr1[66];
+	a2=carr1[-0];
+	a2=carr1[+0];
+	a2=carr1[23];
+	a2=carr1[-23];
+	a2=carr1[66];
+}
+
+void main(){
+	testArr1();
+	testArr2();
+}

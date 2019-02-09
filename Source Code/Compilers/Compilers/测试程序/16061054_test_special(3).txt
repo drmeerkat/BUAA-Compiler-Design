@@ -1,0 +1,84 @@
+const int con_int1=233,con_int2=2333333;
+const char con_char1='a',con_char2='b';
+char char_arr1[233],char_arr2[666];
+int int_arr1[233],int_arr2[666];
+
+void func1(){
+	return;
+}
+
+void func2(){
+	
+}
+
+int func3(){
+	return(1);
+}
+
+int func4(){
+	return(('a'));
+}
+
+char func5(){
+	return('a');
+}
+
+void err_func6(){
+	return(1);
+}
+
+void err_func7(){
+	return('a');
+}
+
+char err_func8(){
+	return(2333);
+}
+
+char err_func9(){
+	return;
+}
+
+char err_func10(){
+
+}
+
+int err_func11(){
+	return('a');
+}
+
+int err_func12(){
+	return;
+}
+
+int err_func13(){
+	int a[0];
+
+}
+
+void main(){
+	int b[2];
+	int a;
+
+	b[2] = 1;
+	a = b[2];
+	b[+100]=0;
+	b[-1] = 0;
+	b[+-1] = 0;
+	b[-+1] = 0;
+	b[0] = b[-1]+b[100];
+
+	func1();
+	func2();
+	func3();
+	func4();
+	func5();
+	err_func6();
+	err_func7();
+	err_func8();
+	err_func9();
+	err_func10();
+	err_func11();
+	err_func12();
+	err_func13();
+}
