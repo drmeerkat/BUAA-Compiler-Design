@@ -11,11 +11,13 @@ Students will be required to design and implement a C0 compiler in 6 weeks, step
   - Software Documentation
 - Test input  
   - Some test programs
+- C0 grammer.txt
+  - Detailed C0 grammer requirements
 ### 0x02 Usage & Settings
 #### Usage
 This is a **Visual Studio 2017** projects, you could open it directly with VS17. 
 Once you start the program, you could press <enter> directly to compile the default `15061200_test.txt` or you could input the full path
-  to your own test program.
+  of your own test program.
 The compiler's output should include:
    
 File Name    | Contents  
